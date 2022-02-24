@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.mat-card {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.top-card {
+  width: 90%;
+  .mat-card-title{
+    color: var(--primary);
+  }
+  .left-align-forced {
+    width: 100%
+  }
+  .mat-icon {
+    margin-top: 2px;
+  }
+  .spent {
+    color: red;
+  }
+  .remaining {
+    color: green;
+  }
+}
+
+.bot-card {
+    height: 100%;
+    color: var(--primary);
+    text-align: center;
+    .mat-card-content {
+      .mat-grid-list{
+        .mat-grid-tile {
+          height: 85%;
+          width: 100%;
+        }
+      }
+    }
+    .mat-icon {
+      transform: scale(5);
+      text-align: center;
+      margin: 8px;
+      width: 50px;
+      height: 35px;
+    }
+}
+
+.home-container {
+  height: 50%;
+  width: 100%;
+}

@@ -1,0 +1,64 @@
+<div class="home-container">
+  <mat-card class="top-card">
+    <mat-card-title>Budget Summary</mat-card-title>
+    <mat-card-content>
+      <mat-grid-list cols="2" rowHeight="5em">
+        <mat-grid-tile>
+          <div class="left-align-forced">
+            <div>Budgeted</div>
+            <mat-icon>currency_pound</mat-icon>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="left-align-forced">
+            <div>Total</div>
+            <mat-icon>currency_pound</mat-icon>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="left-align-forced">
+            <div>Spent</div>
+            <mat-icon class="spent">currency_pound</mat-icon>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="left-align-forced">
+            <div>Remaining</div>
+            <mat-icon class="remaining">currency_pound</mat-icon>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="bot-card">
+    <mat-card-content>
+      <mat-grid-list cols="2" rowHeight="1:1">
+        <mat-grid-tile>
+          <button mat-button>
+            <mat-icon aria-hidden="false" aria-label="Camera Icon">photo_camera</mat-icon>
+            <div>Pay/Record</div>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <button mat-button>
+            <mat-icon aria-hidden="false" aria-label="Account Balance Icon">account_balance</mat-icon>
+            <div>Current Balance</div>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <button mat-button>
+            <mat-icon aria-hidden="false" aria-label="Transaction List Icon">format_list_bulleted</mat-icon>
+            <div>Transactions List</div>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <button mat-button>
+            <mat-icon aria-hidden="false" aria-label="Analytics Icon">analytics</mat-icon>
+            <div>Analytics</div>
+          </button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+</div>

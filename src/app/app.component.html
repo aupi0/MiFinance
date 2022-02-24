@@ -1,29 +1,25 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
-
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
-
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet id="main-content"></ion-router-outlet>
-  </ion-split-pane>
+  <mat-drawer-container class="sidenav-container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="over">
+      <p>Inside sidenav draw</p>
+    </mat-drawer>
+    <mat-toolbar>
+      <button mat-icon-button class="menu-icon"
+        (click)="drawer.toggle()"
+        aria-label="Menu icon-button"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="toolbar-title">MiFinance</span>
+      <!--<span class="toolbar-spacer"></span> -->
+      <button mat-icon-button class="add-icon"
+       aria-label="Add icon-button"
+       (click)="openAddExpenseDialog()"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-toolbar>
+    <!-- Main Page component here -->
+    <router-outlet></router-outlet>
+  </mat-drawer-container>
 </ion-app>
