@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "MiFinance",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
