@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+
+import { NewExpenseDialogComponent } from '../toolbar/components/new-expense-dialog/new-expense-dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private dialog: MatDialog,
+    private router: Router,
+  ) { }
 
   ngOnInit() {}
+
+  openAddExpenseDialog(): void {
+    let dialogRef = this.dialog.open(NewExpenseDialogComponent, {
+      width: '70%'
+    })
+  
+    dialogRef.afterClosed().subscribe(result => {
+      
+    })
+    
+  }
+
+  onTransactions() {
+    this.router.navigate(['/transactions'])
+  }
 
 }

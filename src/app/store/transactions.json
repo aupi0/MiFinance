@@ -1,0 +1,50 @@
+[
+    {
+        "id": 0,
+        "accountId": "Santander",
+        "description": "Netflix",
+        "amount": "9.99",
+        "currency": "GBP",
+        "date": "2022-03-06T00:00:00"
+    },
+    {
+        "id": 1,
+        "accountId": "Santander",
+        "description": "Groceries",
+        "amount": "34.56",
+        "currency": "GBP",
+        "date": "2022-03-07T18:45:04"
+    },
+    {
+        "id": 2,
+        "accountId": "Santander",
+        "description": "Fuel",
+        "amount": "84.23",
+        "currency": "GBP",
+        "date": "2022-03-07T19:20:34"
+    },
+    {
+        "id": 3,
+        "accountId": "Santander",
+        "description": "Rent",
+        "amount": "150.00",
+        "currency": "GBP",
+        "date": "2022-03-10T07:00:00"
+    },
+    {
+        "id": 4,
+        "accountId": "Santander",
+        "description": "Gym",
+        "amount": "25.00",
+        "currency": "GBP",
+        "date": "2022-03-10T07:00:00"
+    },
+    {
+        "id": 5,
+        "accountId": "Santander",
+        "description": "Coffee",
+        "amount": "2.00",
+        "currency": "GBP",
+        "date": "2022-03-07T08:30:00"
+    }
+]

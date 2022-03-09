@@ -1,10 +1,17 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+/* Finastra Angular theme */
+//@use '@finastra/angular-theme' as fds;
+//@use '@finastra/angular-theme/base';
+
+//@include fds.uxg-core();
+//@include fds.uxg-material-theme(fds.$light-theme);
+
 /** Ionic CSS Variables **/
 :root {
   /** MiFinance **/
-  --primary: #673AB7;
+  --primary: #694ED6;
 
   /** primary **/
   --ion-color-primary: #3880ff;

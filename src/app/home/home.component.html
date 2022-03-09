@@ -6,25 +6,37 @@
         <mat-grid-tile>
           <div class="left-align-forced">
             <div>Budgeted</div>
-            <mat-icon>currency_pound</mat-icon>
+            <div class="aligned-with-icon">
+              <mat-icon>currency_pound</mat-icon>
+              <span class="align-with-icon">5000</span>
+            </div>
           </div>
         </mat-grid-tile>
         <mat-grid-tile>
           <div class="left-align-forced">
             <div>Total</div>
-            <mat-icon>currency_pound</mat-icon>
+            <div class="aligned-with-icon">
+              <mat-icon>currency_pound</mat-icon>
+              <span class="align-with-icon">0</span>
+            </div>
           </div>
         </mat-grid-tile>
         <mat-grid-tile>
           <div class="left-align-forced">
             <div>Spent</div>
-            <mat-icon class="spent">currency_pound</mat-icon>
+            <div class="aligned-with-icon">
+              <mat-icon class="spent">currency_pound</mat-icon>
+              <span class="align-with-icon">4829</span>
+            </div>
           </div>
         </mat-grid-tile>
         <mat-grid-tile>
           <div class="left-align-forced">
             <div>Remaining</div>
-            <mat-icon class="remaining">currency_pound</mat-icon>
+            <div class="aligned-with-icon">
+              <mat-icon class="remaining">currency_pound</mat-icon>
+              <span class="align-with-icon">1871</span>
+            </div>
           </div>
         </mat-grid-tile>
       </mat-grid-list>
@@ -33,7 +45,7 @@
 
   <mat-card class="bot-card">
     <mat-card-content>
-      <mat-grid-list cols="2" rowHeight="1:1">
+      <mat-grid-list cols="2">
         <mat-grid-tile>
           <button mat-button>
             <mat-icon aria-hidden="false" aria-label="Camera Icon">photo_camera</mat-icon>
@@ -47,7 +59,7 @@
           </button>
         </mat-grid-tile>
         <mat-grid-tile>
-          <button mat-button>
+          <button mat-button (click)="onTransactions()">
             <mat-icon aria-hidden="false" aria-label="Transaction List Icon">format_list_bulleted</mat-icon>
             <div>Transactions List</div>
           </button>
@@ -61,4 +73,10 @@
       </mat-grid-list>
     </mat-card-content>
   </mat-card>
+  <button mat-fab class="md-fab-bottom-right"
+    aria-label="Add icon-button"
+    color="gradient"
+    (click)="openAddExpenseDialog()">
+    <mat-icon>add</mat-icon>
+  </button>
 </div>

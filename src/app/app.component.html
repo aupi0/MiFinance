@@ -1,25 +1,40 @@
 <ion-app>
-  <mat-drawer-container class="sidenav-container" autosize>
-    <mat-drawer #drawer class="sidenav" mode="over">
-      <p>Inside sidenav draw</p>
-    </mat-drawer>
-    <mat-toolbar>
-      <button mat-icon-button class="menu-icon"
-        (click)="drawer.toggle()"
-        aria-label="Menu icon-button"
-      >
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span class="toolbar-title">MiFinance</span>
-      <!--<span class="toolbar-spacer"></span> -->
-      <button mat-icon-button class="add-icon"
-       aria-label="Add icon-button"
-       (click)="openAddExpenseDialog()"
-      >
-        <mat-icon>add</mat-icon>
-      </button>
-    </mat-toolbar>
-    <!-- Main Page component here -->
-    <router-outlet></router-outlet>
-  </mat-drawer-container>
+  <mat-sidenav-container class="uxg-nav">
+    <mat-sidenav #sidenav>
+      <div class="uxg-nav-header">
+        <div class="uxg-logo"></div>
+      </div>
+      <mat-nav-list class="uxg-nav-list">
+        <a mat-list-item class="uxg-list-item-selected">
+          <p>Getting Started</p>
+        </a>
+        <a mat-list-item>
+          <p matBadge="4" class="uxg-side-badge">Foundations</p>
+        </a>
+        <a mat-list-item>
+          <p matBadge="12" class="uxg-side-badge">UI Elements</p>
+        </a>
+        <a mat-list-item>
+          <p matBadge="7" class="uxg-side-badge">Components</p>
+        </a>
+        <a mat-list-item>
+          <p matBadge="2" class="uxg-side-badge">Patterns</p>
+        </a>
+        <a mat-list-item>
+          <p matBadge="1" class="uxg-side-badge">Applications</p>
+        </a>
+        <a mat-list-item>
+          <p>Tutorials</p>
+        </a>
+        <a mat-list-item>
+          <p>About</p>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-app-bar (toggleSidenav)="sidenav.toggle()"></app-app-bar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
 </ion-app>
