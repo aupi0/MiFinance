@@ -7,9 +7,8 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 //components
 import { AppComponent } from './app.component';
+import { AppBarComponent } from './app-bar/app-bar.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NewExpenseDialogComponent } from './toolbar/components/new-expense-dialog/new-expense-dialog.component';
-
 
 //services
 
@@ -17,7 +16,10 @@ import { NewExpenseDialogComponent } from './toolbar/components/new-expense-dial
 import { MaterialModule } from './shared/material.module';
 
 @NgModule({
-  declarations: [AppComponent, NewExpenseDialogComponent],
+  declarations: [
+    AppComponent,
+    AppBarComponent,
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,

@@ -2,22 +2,25 @@
 
 .mat-card {
     width: 90%;
-    display: block;
+    //display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .top-card {
   width: 90%;
-  .mat-card-title{
-    color: var(--primary);
-  }
+  //.mat-card-title{
+    //color: var(--primary);
+  //}
   .left-align-forced {
     width: 100%
   }
   .mat-icon {
     margin-top: 2px;
+    margin-right: 0x;
+    padding-right: 0px;
   }
   .spent {
     color: red;
@@ -25,6 +28,11 @@
   .remaining {
     color: green;
   }
+}
+
+.aligned-with-icon {
+  display: flex;
+  align-items: center;
 }
 
 .bot-card {
@@ -42,10 +50,21 @@
     .mat-icon {
       transform: scale(5);
       text-align: center;
-      margin: 8px;
-      width: 50px;
-      height: 35px;
+      margin-bottom: 20px;
+      margin-top: 5px;
     }
+}
+
+
+.md-fab-bottom-right {
+  position: fixed !important;
+  right: 7%;
+  bottom: 4%;
+}
+
+.mat-icon {
+  vertical-align: top;
+  font-size: 1.25em;
 }
 
 .home-container {

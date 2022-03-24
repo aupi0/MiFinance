@@ -37,6 +37,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
+import { ScrollToTopModule } from '@finastra/angular-components/scroll-to-top';
+import { GlobalNavModule} from '@finastra/angular-components/global-nav';
+import { AccountCardModule } from '@finastra/angular-components/cards/account-card';
+//import { RepeaterModule } from '@finastra/angular-components/repeater';
+
 
 @NgModule({
   declarations: [],
@@ -76,7 +81,7 @@ import { MatTableModule } from '@angular/material/table';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
   ]
 })
 export class MaterialModule { }
