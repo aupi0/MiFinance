@@ -17,4 +17,16 @@
       font-weight: 300!important;
     }
   }
-  
+
+.account-transaction-list-headline {
+    color: var(--primary);
+}
+
+.mat-card {
+    width: 90%;
+    //display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

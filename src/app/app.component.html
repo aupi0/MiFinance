@@ -5,26 +5,17 @@
         <div class="uxg-logo"></div>
       </div>
       <mat-nav-list class="uxg-nav-list">
-        <a mat-list-item class="uxg-list-item-selected">
-          <p>Getting Started</p>
+        <a mat-list-item [routerLink]="['/home']" [routerLinkActive]="'uxg-list-item-selected'">
+          <p>Home</p>
         </a>
-        <a mat-list-item>
-          <p matBadge="4" class="uxg-side-badge">Foundations</p>
+        <a mat-list-item [routerLink]="['/transactions']" [routerLinkActive]="'uxg-list-item-selected'">
+          <p matBadge="3" class="uxg-side-badge">Accounts</p>
         </a>
-        <a mat-list-item>
-          <p matBadge="12" class="uxg-side-badge">UI Elements</p>
+        <a mat-list-item [routerLink]="['/transactions']" [routerLinkActive]="'uxg-list-item-selected'">
+          <p>Transactions List</p>
         </a>
-        <a mat-list-item>
-          <p matBadge="7" class="uxg-side-badge">Components</p>
-        </a>
-        <a mat-list-item>
-          <p matBadge="2" class="uxg-side-badge">Patterns</p>
-        </a>
-        <a mat-list-item>
-          <p matBadge="1" class="uxg-side-badge">Applications</p>
-        </a>
-        <a mat-list-item>
-          <p>Tutorials</p>
+        <a mat-list-item [routerLink]="['/transactions']" [routerLinkActive]="'uxg-list-item-selected'">
+          <p>Analytics</p>
         </a>
         <a mat-list-item>
           <p>About</p>

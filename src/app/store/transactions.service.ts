@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { AccountTransaction } from './models/transaction';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
+
+
+import { AccountTransaction } from './models/transaction';
 
 @Injectable()
 export class TransactionsService {
@@ -21,28 +23,28 @@ export class TransactionsService {
     return this._account_transactions.asObservable();
   }
 
-  addUser(user: AccountTransaction): Promise<AccountTransaction> {
+  addAccountTransaction(account_transaction: AccountTransaction): Promise<AccountTransaction> {
     return new Promise((resolver, reject) => {
-      user.id = this.dataStore.account_transactions.length + 1;
-      this.dataStore.account_transactions.push(user);
+      account_transaction.id = this.dataStore.account_transactions.length + 1;
+      this.dataStore.account_transactions.push(account_transaction);
       this._account_transactions.next(Object.assign({}, this.dataStore).account_transactions);
-      resolver(user);
+      resolver(account_transaction);
     })
   }
 
-  userById(id: number) {
+  AccountTransactionById(id: number) {
     return this.dataStore.account_transactions.find(x => x.id == id);
   }
 
   loadAll() {
-    const transactionsUrl = './transactions.json'
+    const transactionsUrl = 'assets/transactions.json'
 
     return this.http.get<AccountTransaction[]>(transactionsUrl)
       .subscribe(data => {
         this.dataStore.account_transactions = data;
         this._account_transactions.next(Object.assign({}, this.dataStore).account_transactions);
       }, error => {
-        console.log("Failed to fetch Transactions")
+        console.log("Failed to fetch Transactions with error:", error)
       });
   }
 
