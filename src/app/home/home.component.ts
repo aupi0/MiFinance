@@ -29,8 +29,16 @@ export class HomeComponent implements OnInit {
     
   }
 
+  onAccounts() {
+    this.router.navigate(['/accounts'])
+  }
+
   onTransactions() {
     this.router.navigate(['/transactions'])
+  }
+
+  onAnalytics() {
+    this.router.navigate(['/analytics'])
   }
 
 }

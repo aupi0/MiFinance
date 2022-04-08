@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "accountId": "Santander",
+        "description": "Easy Access Account",
+        "currentBalance": "56.89",
+        "accountNumber": "12345678"
+    },
+    {
+        "id": 1,
+        "accountId": "Celo",
+        "description": "Crypto Wallet",
+        "currentBalance": "8.25",
+        "accountNumber": "11111111"
+    },
+    {
+        "id": 2,
+        "accountId": "HSBC",
+        "description": "Savings Account",
+        "currentBalance": "550.00",
+        "accountNumber": "87654321"
+    }
+]

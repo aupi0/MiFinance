@@ -1,3 +1,20 @@
-<p>
-  accounts-list works!
-</p>
+<mat-card class="main-card">
+  <mat-card-title>Accounts</mat-card-title>
+    <ng-container *ngFor="let account of accounts | async">
+        <mat-card class="account-card">
+          <mat-card-content>
+            <div class="round-icon">
+              <mat-icon aria-hidden="false" aria-label="Account card">credit_card</mat-icon>
+            </div>
+            <div>
+              <div class="uxg-body-1">{{ account.accountId }}</div>
+              <div class="uxg-h5">{{ account.currentBalance | currency }}</div>
+            </div>
+          </mat-card-content>
+          <mat-card-footer>
+            <mat-divider></mat-divider>
+            <div class="uxg-body-2 account-card-number-padding">{{ account.accountNumber }}</div>
+          </mat-card-footer>
+        </mat-card>
+    </ng-container>
+</mat-card>

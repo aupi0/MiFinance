@@ -5,16 +5,19 @@
         <div class="uxg-logo"></div>
       </div>
       <mat-nav-list class="uxg-nav-list">
-        <a mat-list-item [routerLink]="['/home']" [routerLinkActive]="'uxg-list-item-selected'">
+        <a mat-list-item (click)="sidenav.toggle()" [routerLink]="['/home']" [routerLinkActive]="'uxg-list-item-selected'">
           <p>Home</p>
         </a>
-        <a mat-list-item [routerLink]="['/transactions']" [routerLinkActive]="'uxg-list-item-selected'">
+        <a mat-list-item>
+          <p>Pay/Record</p>
+        </a>
+        <a mat-list-item (click)="sidenav.toggle()" [routerLink]="['/accounts']" [routerLinkActive]="'uxg-list-item-selected'">
           <p matBadge="3" class="uxg-side-badge">Accounts</p>
         </a>
-        <a mat-list-item [routerLink]="['/transactions']" [routerLinkActive]="'uxg-list-item-selected'">
+        <a mat-list-item (click)="sidenav.toggle()" [routerLink]="['/transactions']" [routerLinkActive]="'uxg-list-item-selected'">
           <p>Transactions List</p>
         </a>
-        <a mat-list-item [routerLink]="['/transactions']" [routerLinkActive]="'uxg-list-item-selected'">
+        <a mat-list-item (click)="sidenav.toggle()" [routerLink]="['/analytics']" [routerLinkActive]="'uxg-list-item-selected'">
           <p>Analytics</p>
         </a>
         <a mat-list-item>
